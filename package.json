@@ -1,6 +1,6 @@
 {
   "name": "@f77/f77-hooks",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Useful react hooks for everyday use",
   "types": "dist",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
     "clean": "del dist",
     "build": "yarn clean && tsc -p .",
     "preversion": "yarn build",
-    "postversion": "git push --tags && yarn publish . --tag $npm_package_version --new-version $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\"",
+    "postversion": "git push --tags && yarn publish . --tag $npm_package_version --new-version $npm_package_version && git push --set-upstream origin main && echo \"Successfully released version $npm_package_version!\"",
     "pub": "yarn version --patch && yarn build && yarn publish ",
     "pub:minor": "yarn version --minor && yarn build && yarn publish --new-version $npm_package_version",
     "pub:major": "yarn version --major&& yarn build && yarn publish --new-version $npm_package_version",
