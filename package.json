@@ -1,6 +1,6 @@
 {
   "name": "@f77/f77-hooks",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "Useful react hooks for everyday use",
   "types": "dist",
   "main": "dist/index.js",
