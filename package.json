@@ -10,6 +10,8 @@
   "scripts": {
     "clean": "del dist",
     "build": "yarn clean && tsc -p .",
+    "preversion": "yarn build",
+    "postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\"",
     "pub": "yarn version --patch && yarn build && yarn publish ",
     "pub:minor": "yarn version --minor && yarn build && yarn publish --new-version $npm_package_version",
     "pub:major": "yarn version --major&& yarn build && yarn publish --new-version $npm_package_version",
