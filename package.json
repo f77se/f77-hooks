@@ -1,0 +1,11 @@
+{
+  "name": "f77-hooks",
+  "version": "0.8.0",
+  "main": "dist/index.js",
+  "repository": "git@github.com:f77se/f77-hooks.git",
+  "author": "mavdmichael <michael+github@marknadsavdelningen.se>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
