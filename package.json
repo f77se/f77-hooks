@@ -1,6 +1,6 @@
 {
   "name": "@f77/f77-hooks",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Useful react hooks for everyday use",
   "types": "dist",
   "main": "dist/index.js",
@@ -10,9 +10,9 @@
   "scripts": {
     "clean": "del dist",
     "build": "yarn clean && tsc -p .",
-    "pub": "yarn version --patch && yarn build && git commit -a -m 'Release $npm_package_version' && git push origin main && yarn publish --tag $npm_package_version",
-    "pub:minor": "yarn version --minor && yarn build && git commit -a -m 'Release $npm_package_version' && git push origin main && yarn publish --tag $npm_package_version",
-    "pub:major": "yarn version --major&& yarn build && git commit -a -m 'Release $npm_package_version' && git push origin main && yarn publish --tag $npm_package_version"
+    "pub": "yarn version --patch && yarn build && git commit -a -m 'Release $npm_package_version' && git push origin main && yarn publish --new-version $npm_package_version --tag $npm_package_version",
+    "pub:minor": "yarn version --minor && yarn build && git commit -a -m 'Release $npm_package_version' && git push origin main && yarn publish --new-version $npm_package_version --tag $npm_package_version",
+    "pub:major": "yarn version --major&& yarn build && git commit -a -m 'Release $npm_package_version' && git push origin main && yarn publish --new-version $npm_package_version --tag $npm_package_version"
   },
   "devDependencies": {
     "del-cli": "^4.0.1",
