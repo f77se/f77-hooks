@@ -1,6 +1,6 @@
 {
-  "name": "f77-hooks",
-  "version": "0.8.0",
+  "name": "@f77/f77-hooks",
+  "version": "0.0.0",
   "description": "Useful react hooks for everyday use",
   "types": "dist",
   "main": "dist/index.js",
@@ -8,7 +8,11 @@
   "author": "mavdmichael <michael+github@marknadsavdelningen.se>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p ."
+    "clean": "del build",
+    "build": "yarn clean && tsc -p .",
+    "pub": "yarn version --patch && yarn build && git commit -a -m 'Release' + $npm_package_version && yarn publish --tag $npm_package_version",
+    "pub:minor": "yarn version --minor && yarn build && git commit -a -m 'Release' + $npm_package_version && yarn publish --tag $npm_package_version",
+    "pub:major": "yarn version --major&& yarn build && git commit -a -m 'Release' + $npm_package_version && yarn publish --tag $npm_package_version"
   },
   "devDependencies": {
     "typescript": "^4.4.3"
